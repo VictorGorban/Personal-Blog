@@ -1,0 +1,60 @@
+/*.container {*/
+  /*background-color: lightgray; }*/
+
+/*.container-fluid {*/
+  /*background-color: darkgray; }*/
+
+/*p {*/
+  /*background-color: #fff; }*/
+
+/*h1 {*/
+  /*background-color: green; }*/
+
+/** {*/
+  /*margin:0;*/
+  /*padding:0;*/
+/*}*/
+
+/*body {*/
+  /*font: 100% / 1.5 Arial;*/
+/*}*/
+
+.parallax {
+  font-size: 40px;
+}
+
+/* add some padding to force scrollbars */
+
+
+
+.parallax {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.parallax__layer {
+  padding: 100vh 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.parallax__layer--base {
+  background-color: rgba(255, 100, 0, 0.4);
+  padding: 50vh;
+}
+
+.parallax__layer--back {
+   transform: translateZ(-1px);
+   background-color: rgba(0, 0, 0, 0.4);
+ }
+
+.parallax__layer--fore {
+  transform: translateZ(1.2px);
+  background-color: rgba(255, 0, 0, 0.4);
+}

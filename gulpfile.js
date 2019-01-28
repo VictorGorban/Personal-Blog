@@ -3,9 +3,9 @@ var sass = require('gulp-sass');
 //var watch = require('gulp-watch');
 var browserSync = require('browser-sync').create();
 
-var pathToSassFiles = "src/styles/sass/**/*.scss";
+var pathToSassFiles = "src/styles/sass/*/*.scss";
 var pathToCss = "src/styles/css";
-var pathToCssFiles  = "src/styles/css/**/*.css";
+var pathToCssFiles  = "src/styles/css/*/*.css";
 
 // // отдельно не нужно
 // gulp.task('sync.init', function(){
@@ -37,9 +37,9 @@ gulp.task('watch-sass', function(){
 // работает как надо
 gulp.task('sync', function(){
     // init нужен, чтобы обновление работало. Без интерпретатор не видит, к какому объекту применять функцию.
-    browserSync.init({ 
+    browserSync.init({
         server: ".",
-        index: "about.html"
+        index: "home.html"
     });
     gulp.watch(pathToCssFiles, browserSync.reload);
     gulp.watch("./*.html", browserSync.reload);
